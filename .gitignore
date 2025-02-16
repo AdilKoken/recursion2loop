@@ -1,2 +1,11 @@
 # Environments
 venv/
+
+# Personal notes
+personal_notes_for_dev.md
+
+# Build
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
