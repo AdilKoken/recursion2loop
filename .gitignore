@@ -1,11 +1,35 @@
-# Environments
-venv/
-
 # Personal notes
 personal_notes_for_dev.md
 
-# Build
+# Python build artifacts
+*.py[cod]
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.so
+build/
+dist/
+*.egg
+*.egg-info/
+
+# Virtual environments
+venv/
+.venv/
+
+# IDE specific files
+.DS_Store
+
+# Test coverage
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+
+# Documentation builds
+docs/_build/
+site/
+
+# mypy
+.mypy_cache/
+
+# Distribution
+*.tar.gz
+*.whl
