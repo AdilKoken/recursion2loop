@@ -19,7 +19,7 @@ pip install recursion2loop
 
 ## Available Transformations
 
-- Tree Traversals (check for more details: [tree_iterations.py](documentation/tree_iterations.md))
+- Tree Traversals (check for more details: [tree traversal documentation](documentation/tree_traversal.md))
 
 # License
 
