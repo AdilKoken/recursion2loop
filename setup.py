@@ -10,5 +10,6 @@ setup(
     setup_requires=['pytest-runner'],
     tests_require=['pytest'],
     test_suite='tests',
+    url='https://github.com/AdilKoken/recursion2loop',
 )
 
