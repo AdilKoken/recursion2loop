@@ -25,23 +25,10 @@ pip install recursion2loop
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Citation
-
-If you use this library in your research, please cite:
-
-```bibtex
-@software{recursion2iteration,
-  title = {recursion2iteration: Transform Recursive Algorithms to Iterative Implementations},
-  author = {Your Name},
-  year = {2025},
-  url = {https://github.com/adilkoken/recursion2loop}
-}
-```
-
 # Code of Conduct
 
 This project and everyone participating in it is governed by the [Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code.
 
 # Contributing
 
-Your contributions are always welcome! Please take a look at the [contribution guidelines](https://github.com/adilkoken/recursion2loop/CONTRIBUTING.md) first.
+Your contributions are always welcome! Please take a look at the [contribution guidelines](CONTRIBUTING.md) first.

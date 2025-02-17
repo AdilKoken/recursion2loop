@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: "Köken"
+    given-names: "Adil"
+preferred-citation:
+  type: generic
+  title: "recursion2loop: Conversion of recursive functions to iterative implementations"
+  authors:
+    - family-names: "Köken"
+      given-names: "Adil"
+  url: "https://github.com/adilkoken/recursion2loop"
