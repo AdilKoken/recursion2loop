@@ -83,7 +83,7 @@ class TestSerializeTree:
         serialized_tree = tree_operations.serialize_tree(root)  
         
         # Check if the serialized tree is correct
-        assert serialized_tree == [1, 2, 3]
+        assert serialized_tree == [[1], [2, 3]]
         
     def test_serialize_tree_empty_tree(self):
         # Create an empty binary tree
@@ -103,7 +103,7 @@ class TestSerializeTree:
         serialized_tree = tree_operations.serialize_tree(root)
         
         # Check if the serialized tree is correct
-        assert serialized_tree == [1]
+        assert serialized_tree == [[1]]
         
     def test_serialize_tree_complex_tree_1(self):
         # Create a complex binary tree
@@ -119,7 +119,7 @@ class TestSerializeTree:
         serialized_tree = tree_operations.serialize_tree(root)
         
         # Check if the serialized tree is correct
-        assert serialized_tree == [1, 2, 3, 4, 5, 6, 7]
+        assert serialized_tree == [[1], [2, 3], [4, 5], [6, 7]]
 
     def test_serialize_tree_complex_tree_2(self):
         # Create a complex binary tree
@@ -138,7 +138,14 @@ class TestSerializeTree:
         serialized_tree = tree_operations.serialize_tree(root)
         
         # Check if the serialized tree is correct
-        assert serialized_tree == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        assert serialized_tree == [ 
+                                    [1],
+                                    [2, 3],
+                                    [4, 5], [6, 7], 
+                                    [8, None], [None, None], [None, None], [None, None],
+                                    [9, None], [None, None],
+                                    [None, 10]
+                                ]
         
         
 # test deserialize_tree
@@ -156,9 +163,9 @@ class TestDeserializeTree:
         deserialized_tree = tree_operations.deserialize_tree(serialized_tree)
         
         # Check if the deserialized tree is correct
-        assert deserialized_tree.val == 1
-        assert deserialized_tree.left.val == 2
-        assert deserialized_tree.right.val == 3
+        assert deserialized_tree.value == 1
+        assert deserialized_tree.left.value == 2
+        assert deserialized_tree.right.value == 3
 
     def test_deserialize_tree_empty_tree(self):
         # Create an empty binary tree
@@ -172,18 +179,17 @@ class TestDeserializeTree:
 
     def test_deserialize_tree_single_node_tree(self):
         # Create a single node binary tree
-        serialized_tree = [1]
+        serialized_tree = [[1]]
 
         # Deserialize the tree
         deserialized_tree = tree_operations.deserialize_tree(serialized_tree)
         
         # Check if the deserialized tree is correct
-        assert deserialized_tree.val == 1
+        assert deserialized_tree.value == 1
         assert deserialized_tree.left is None
         assert deserialized_tree.right is None
+    
 
-    def test_deserialize_tree_complex_tree_1(self):
-        # Create a complex binary tree
-        serialized_tree = [1, 2, 3, 4, 5, 6, 7]
+
+    
         
-        # Deserialize the tree

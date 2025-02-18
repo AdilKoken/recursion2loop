@@ -69,16 +69,16 @@ def serialize_tree(root: Optional[TreeNode]) -> list[list[Optional[T]]]:
     validate_tree_node(root)
 
     queue = [root]  # Initialize the queue with the root node for level order traversal
-    serialized_tree = [[root.val]]  # Start serialization with the root node's value
+    serialized_tree = [[root.value]]  # Start serialization with the root node's value
 
     while queue:
         node = queue.pop(0)
 
         # Retrieve the value of the child, or None if it doesn't exist
-        left_val = node.left.val if node.left else None
-        right_val = node.right.val if node.right else None
+        left_value = node.left.value if node.left else None
+        right_value = node.right.value if node.right else None
 
-        serialized_tree.append([left_val, right_val])
+        serialized_tree.append([left_value, right_value])
 
         # If the child exists, enqueue it for further processing
         if node.left:
@@ -86,7 +86,14 @@ def serialize_tree(root: Optional[TreeNode]) -> list[list[Optional[T]]]:
         if node.right:
             queue.append(node.right)
 
-    return serialized_tree  # Return the fully serialized tree
+    # we remove the "last" None values in the serialized tree to save space
+    # start from the end of the list until we find a non-None value
+    for i in range(len(serialized_tree) - 1, -1, -1):
+        if serialized_tree[i][0] is not None or serialized_tree[i][1] is not None:
+            break
+        serialized_tree.pop(i)
+
+    return serialized_tree
 
 def deserialize_tree(data: list[list[Optional[T]]]) -> Optional[TreeNode]:
     """
@@ -109,6 +116,9 @@ def deserialize_tree(data: list[list[Optional[T]]]) -> Optional[TreeNode]:
 
     index = 1
 
+    # we keep index < len(data) to avoid out of bounds access for inconsistent input data
+    # also for data saving, we reduce the none values in the serialized data to save space
+    # so we need to check if the current index is valid
     while queue and index < len(data):
         node = queue.pop(0)
 
