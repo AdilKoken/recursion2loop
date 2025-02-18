@@ -1,6 +1,12 @@
-- `inorder_tree_traversal`: Visit nodes in order (left subtree, root, right subtree)
-- `preorder_tree_traversal`: Visit nodes in preorder (root, left subtree, right subtree)
-- `postorder_tree_traversal`: Visit nodes in postorder (left subtree, right subtree, root)
+documentation for the methods in the `tree_traversal.py` file.
+
+`inorder_tree_traversal`: Visit nodes in order (left subtree, root, right subtree)
+
+`preorder_tree_traversal`: Visit nodes in preorder (root, left subtree, right subtree)
+
+`postorder_tree_traversal`: Visit nodes in postorder (left subtree, right subtree, root)
+
+`level_order_tree_traversal`: Visit nodes in level order, each level is visited from left to right.
 
 Each traversal function:
 
