@@ -1,34 +1,5 @@
-from typing import TypeVar, Optional, Any
-from dataclasses import dataclass
-
-
-# enforces consistency of tree root and node values
-T = TypeVar('T')
-
-@dataclass
-class TreeNode:
-    value: T
-    left: Optional['TreeNode'] = None
-    right: Optional['TreeNode'] = None
-
-def validate_tree_node(node: Any):
-    """Validate that a node implements the minimum tree node interface.
-    
-    Args:
-        node: Any object to check as a tree node
-
-    Raises:
-        AttributeError: If the node does not have the required attributes
-    """
-
-    if node is not None:
-        if not hasattr(node, 'value'):
-            raise AttributeError("Node must have a 'value' attribute")
-        if not hasattr(node, 'left'):
-            raise AttributeError("Node must have a 'left' attribute")
-        if not hasattr(node, 'right'):
-            raise AttributeError("Node must have a 'right' attribute")
-
+from typing import Optional
+from .tree_node import TreeNode, validate_tree_node, T
 
 def inorder_tree_traversal(root: Optional[TreeNode]) -> list[T]:
     """
@@ -79,6 +50,8 @@ def preorder_tree_traversal(root: Optional[TreeNode]) -> list[T]:
     if not root:
         return []
     
+    validate_tree_node(root)
+    
     stack = [root]
     result = []
 
@@ -114,6 +87,8 @@ def postorder_tree_traversal(root: Optional[TreeNode]) -> list[T]:
     stack = [root]
     result = []
     
+    validate_tree_node(root)
+
     while stack:
         # Modified preorder traversal (root, right, left)
         node = stack.pop()
@@ -125,3 +100,32 @@ def postorder_tree_traversal(root: Optional[TreeNode]) -> list[T]:
 
     # Reverse to get postorder (left, right, root)
     return result[::-1]
+
+def level_order_tree_traversal(root: Optional[TreeNode]) -> list[T]:
+    """
+    Performs an iterative level order traversal of a binary tree.
+    Level order traversal visits nodes level by level from left to right.
+
+    Args:
+        root: Root node of the binary tree
+
+    Returns:
+        List of node values in level order traversal order
+    """
+    if not root:
+        return []
+    
+    validate_tree_node(root)
+    
+    stack = [root]
+    result = []
+    
+    while stack:
+        node = stack.pop(0)
+        result.append(node.value)
+        if node.left:
+            stack.append(node.left)
+        if node.right:
+            stack.append(node.right)
+
+    return result
