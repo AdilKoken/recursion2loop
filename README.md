@@ -3,6 +3,7 @@
 [![PyPI version](https://badge.fury.io/py/recursion2loop.svg)](https://badge.fury.io/py/recursion2loop)
 [![Python Versions](https://img.shields.io/pypi/pyversions/recursion2loop.svg)](https://pypi.org/project/recursion2loop/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python Package](https://github.com/adilkoken/recursion2loop/actions/workflows/python-package.yml/badge.svg)](https://github.com/adilkoken/recursion2loop/actions/workflows/python-package.yml)
 
 This package provides common recursive patterns to iterative implementations. The goal is to provide stack-safe and memory-efficient iterative implementations in python language.
 
