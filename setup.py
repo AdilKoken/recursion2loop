@@ -17,7 +17,7 @@ setup(
     tests_require=['pytest'],
     test_suite='tests',
     url='https://github.com/AdilKoken/recursion2loop',
-    python_requires='>=3.7',
+    python_requires='>=3.9',
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
