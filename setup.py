@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="recursion2loop",
-    version="0.2.0",
+    version="0.2.1",
     packages=find_packages(include=["recursion2loop", "recursion2loop.*"]),
     description="conversion of recursive functions to iterative implementations. Optimize your Python code by transforming stack-heavy recursion into efficient loops.",
     long_description=long_description,

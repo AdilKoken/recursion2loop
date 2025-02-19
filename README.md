@@ -19,17 +19,17 @@ pip install recursion2loop
 
 ## Available Transformations
 
-- Tree Traversals (check for more details: [tree traversal documentation](documentation/doc_tree_traversal.md))
-- Tree Operations (check for more details: [tree operations documentation](documentation/doc_tree_operations.md))
+- Tree Traversals (check for more details: [tree traversal documentation](https://github.com/adilkoken/recursion2loop/blob/main/documentation/doc_tree_traversal.md))
+- Tree Operations (check for more details: [tree operations documentation](https://github.com/adilkoken/recursion2loop/blob/main/documentation/doc_tree_operations.md))
 
 # License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/adilkoken/recursion2loop/blob/main/LICENSE) file for details.
 
 # Code of Conduct
 
-This project and everyone participating in it is governed by the [Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code.
+This project and everyone participating in it is governed by the [Code of Conduct](https://github.com/adilkoken/recursion2loop/blob/main/CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code.
 
 # Contributing
 
-Your contributions are always welcome! Please take a look at the [contribution guidelines](CONTRIBUTING.md) first.
+Your contributions are always welcome! Please take a look at the [contribution guidelines](https://github.com/adilkoken/recursion2loop/blob/main/CONTRIBUTING.md).
