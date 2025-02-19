@@ -143,7 +143,7 @@ class TestSerializeTree:
                                     [2, 3],
                                     [4, 5], [6, 7], 
                                     [8, None], [None, None], [None, None], [None, None],
-                                    [9, None], [None, None],
+                                    [9, None],
                                     [None, 10]
                                 ]
         
