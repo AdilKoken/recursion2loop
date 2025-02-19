@@ -4,11 +4,12 @@
 
 Before sending your pull requests, make sure you do the following:
 
-- Read the [contributing guidelines](CONTRIBUTING.md)
-- Read the [Code of Conduct](CODE_OF_CONDUCT.md)
-- Check if your changes are consistent with the [guidelines](#general-guidelines-and-philosophy-for-contribution)
-- Changes are consistent with the [Coding Style](#python-coding-style)
-- Run the [unit tests](#running-unit-tests)
+1. Read the [contributing guidelines](CONTRIBUTING.md)
+2. Read the [Code of Conduct](CODE_OF_CONDUCT.md)
+3. Check if your changes are consistent with the [guidelines](#general-guidelines-and-philosophy-for-contribution)
+4. Changes are consistent with the [Coding Style](#python-coding-style)
+5. Check if the documentation for the change is updated
+6. Run the [unit tests](#running-unit-tests)
 
 ## How to become a contributor and submit your own code
 

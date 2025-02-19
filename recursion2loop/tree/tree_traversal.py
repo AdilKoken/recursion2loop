@@ -1,3 +1,8 @@
+"""
+This module provides iterative implementations of common binary tree traversal algorithms.
+It includes inorder, preorder, postorder, and level-order traversal methods.
+"""
+
 from typing import Optional
 from .tree_node import TreeNode, validate_tree_node, T
 
@@ -15,12 +20,12 @@ def inorder_tree_traversal(root: Optional[TreeNode]) -> list[T]:
     """
     if not root:
         return []
-    
+
     validate_tree_node(root)
-    
+
     stack = []
     result = []
-    
+
     while root or stack:
         # Traverse to leftmost node
         while root:
@@ -49,9 +54,9 @@ def preorder_tree_traversal(root: Optional[TreeNode]) -> list[T]:
     """
     if not root:
         return []
-    
+
     validate_tree_node(root)
-    
+
     stack = [root]
     result = []
 
@@ -59,7 +64,7 @@ def preorder_tree_traversal(root: Optional[TreeNode]) -> list[T]:
         # Process current node
         node = stack.pop()
         result.append(node.value)
-        
+
         # Push right child first so left is processed first (LIFO)
         if node.right:
             stack.append(node.right)
@@ -83,10 +88,10 @@ def postorder_tree_traversal(root: Optional[TreeNode]) -> list[T]:
     """
     if not root:
         return []
-    
+
     stack = [root]
     result = []
-    
+
     validate_tree_node(root)
 
     while stack:
@@ -114,12 +119,12 @@ def level_order_tree_traversal(root: Optional[TreeNode]) -> list[T]:
     """
     if not root:
         return []
-    
+
     validate_tree_node(root)
-    
+
     stack = [root]
     result = []
-    
+
     while stack:
         node = stack.pop(0)
         result.append(node.value)

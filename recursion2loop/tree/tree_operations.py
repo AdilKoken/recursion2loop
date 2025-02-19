@@ -1,6 +1,12 @@
+"""
+This module provides essential binary tree operations:
+    - get_tree_height
+    - serialize_tree
+    - deserialize_tree
+"""
+
 from typing import Optional
 from .tree_node import TreeNode, validate_tree_node, T
-from .tree_traversal import level_order_tree_traversal
 
 # Now you can add your tree operations here
 # For example:
@@ -50,7 +56,8 @@ def serialize_tree(root: Optional[TreeNode]) -> list[list[Optional[T]]]:
     level order traversal (breadth-first traversal).
 
     The first element of the list is a list of one element, the root node
-    The rest of the elements are lists of two, representing the left and right children of each node.
+    The rest of the elements are lists of two, representing the left and right children of
+    each node.
     If a node is null, the corresponding position in the list is None.
 
     Args:
@@ -58,7 +65,8 @@ def serialize_tree(root: Optional[TreeNode]) -> list[list[Optional[T]]]:
 
     Returns:
         A list of lists of node values representing the serialized binary tree.
-        The first element is the root node, followed by the left and right children of the non-null nodes.
+        The first element is the root node, followed by the left and right children of the
+        non-null nodes.
         Returns an empty list if the tree is empty.
     """
     # If the tree is empty, return an empty list
